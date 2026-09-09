@@ -1,12 +1,12 @@
 /* =========================================================
-   AZZIZ — DARKPSY
-   CLEAN / DARK / UNDERGROUND
+   AZZIZ — DARKPSY WEBSITE
+   CLEAN DARK VERSION
 ========================================================= */
 
 
-/* =========================
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -14,16 +14,24 @@
     padding: 0;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     background: #000;
     color: #eeeeee;
-    font-family: "Barlow Condensed", Arial, sans-serif;
+
+    font-family:
+        "Barlow Condensed",
+        Arial,
+        sans-serif;
+
     overflow-x: hidden;
 }
+
 
 a {
     color: inherit;
@@ -31,36 +39,47 @@ a {
 }
 
 
-/* =========================
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
    VARIABLES
-========================= */
+========================================================= */
 
 :root {
+
     --black: #000000;
+
     --dark: #050505;
+
     --white: #eeeeee;
 
     --grey: #666666;
+
     --dark-grey: #333333;
 
     --red: #700000;
 
-    --line: rgba(255,255,255,0.12);
+    --line:
+        rgba(255, 255, 255, 0.12);
 }
 
 
-/* =========================
+/* =========================================================
    PAGE
-========================= */
+========================================================= */
 
 .page {
+
     min-height: 100vh;
 
     background:
         radial-gradient(
-            circle at 50% 20%,
-            rgba(90,0,0,0.07),
-            transparent 40%
+            circle at 50% 18%,
+            rgba(100, 0, 0, 0.07),
+            transparent 38%
         ),
         #000;
 }
@@ -71,7 +90,9 @@ a {
 ========================================================= */
 
 .header {
+
     width: 90vw;
+
     max-width: 1250px;
 
     height: 70px;
@@ -91,22 +112,34 @@ a {
         1px solid var(--line);
 }
 
+
 .brand {
+
     font-size: 21px;
+
     font-weight: 900;
+
     letter-spacing: 0.13em;
 }
 
+
 .brand span {
-    color: var(--red);
+
+    color:
+        var(--red);
 }
 
+
 .navigation {
+
     display: flex;
+
     gap: 30px;
 }
 
+
 .navigation a {
+
     color: #555;
 
     font-family:
@@ -114,17 +147,22 @@ a {
         monospace;
 
     font-size: 7px;
+
     letter-spacing: 0.15em;
 
     transition:
         color 0.25s ease;
 }
 
+
 .navigation a:hover {
+
     color: #fff;
 }
 
+
 .header-info {
+
     justify-self: end;
 
     color: #444;
@@ -134,6 +172,7 @@ a {
         monospace;
 
     font-size: 7px;
+
     letter-spacing: 0.18em;
 }
 
@@ -143,7 +182,9 @@ a {
 ========================================================= */
 
 .hero {
+
     width: 90vw;
+
     max-width: 1250px;
 
     min-height:
@@ -155,15 +196,20 @@ a {
         28px 0 35px;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
 
     border-bottom:
         1px solid var(--line);
 }
 
+
 .hero-top {
+
     display: flex;
+
     justify-content: space-between;
 
     color: #444;
@@ -173,52 +219,58 @@ a {
         monospace;
 
     font-size: 7px;
+
     letter-spacing: 0.2em;
 }
 
 
 /* =========================================================
-   HERO LOGO
+   HERO CENTER
 ========================================================= */
 
 .hero-center {
+
     flex: 1;
 
     display: flex;
 
-    align-items: center;
+    flex-direction: column;
+
     justify-content: center;
+
+    align-items: center;
 }
 
 
-/*
-   IMPORTANT:
-   Keep azziz-logo.jpg beside index.html.
-
-   The original logo is the ONLY artist lettering
-   displayed in the hero.
-*/
+/* =========================================================
+   ORIGINAL LOGO
+========================================================= */
 
 .artwork {
-    width: min(560px, 68vw);
 
-    aspect-ratio: 1 / 1;
+    width:
+        min(560px, 68vw);
 
     display: flex;
 
-    align-items: center;
     justify-content: center;
+
+    align-items: center;
 }
 
+
 .artwork img {
+
     display: block;
 
     width: 100%;
-    height: 100%;
+
+    height: auto;
 
     object-fit: contain;
 
-    mix-blend-mode: screen;
+    mix-blend-mode:
+        screen;
 
     filter:
         contrast(1.08);
@@ -227,8 +279,52 @@ a {
         transform 0.4s ease;
 }
 
+
 .artwork img:hover {
-    transform: scale(1.015);
+
+    transform:
+        scale(1.015);
+}
+
+
+/* =========================================================
+   GENRE TEXT
+   NO AZZIZ LETTERING HERE
+========================================================= */
+
+.artist-subtitle {
+
+    margin-top: 12px;
+
+    color: #666;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 0.22em;
+
+    text-align: center;
+}
+
+
+.artist-subtitle::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 30px;
+
+    height: 1px;
+
+    margin:
+        0 12px 3px 0;
+
+    background:
+        var(--red);
 }
 
 
@@ -237,6 +333,7 @@ a {
 ========================================================= */
 
 .hero-bottom {
+
     display: grid;
 
     grid-template-columns:
@@ -255,16 +352,24 @@ a {
         monospace;
 
     font-size: 7px;
+
     letter-spacing: 0.18em;
 }
 
+
 .hero-line {
+
     height: 1px;
-    background: var(--line);
+
+    background:
+        var(--line);
 }
 
+
 .red {
-    color: var(--red);
+
+    color:
+        var(--red);
 }
 
 
@@ -273,7 +378,9 @@ a {
 ========================================================= */
 
 .section {
+
     width: 90vw;
+
     max-width: 1250px;
 
     margin: 0 auto;
@@ -285,7 +392,9 @@ a {
         1px solid var(--line);
 }
 
+
 .section-title {
+
     display: flex;
 
     align-items: center;
@@ -295,8 +404,11 @@ a {
     margin-bottom: 40px;
 }
 
+
 .section-title span {
-    color: var(--red);
+
+    color:
+        var(--red);
 
     font-family:
         "Space Mono",
@@ -305,10 +417,13 @@ a {
     font-size: 7px;
 }
 
+
 .section-title h2 {
+
     color: #777;
 
     font-size: 12px;
+
     font-weight: 600;
 
     letter-spacing: 0.18em;
@@ -320,6 +435,7 @@ a {
 ========================================================= */
 
 .music-grid {
+
     max-width: 1100px;
 
     display: grid;
@@ -332,18 +448,28 @@ a {
 }
 
 
-/* SOUNDCLOUD */
+/* =========================================================
+   SOUNDCLOUD
+========================================================= */
 
 .soundcloud-box {
+
+    width: 525px;
+
+    max-width: 100%;
+
     padding: 10px;
 
-    background: #050505;
+    background:
+        #050505;
 
     border:
         1px solid var(--line);
 }
 
+
 .box-header {
+
     height: 35px;
 
     padding: 0 5px;
@@ -351,6 +477,7 @@ a {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     color: #555;
@@ -360,26 +487,30 @@ a {
         monospace;
 
     font-size: 7px;
+
     letter-spacing: 0.15em;
 }
 
+
 .box-header a {
+
     color: #444;
 
     transition:
         color 0.25s ease;
 }
 
+
 .box-header a:hover {
+
     color: #fff;
 }
 
 
-/*
-   SMALL ORIGINAL PLAYER
-*/
+/* Smaller original player */
 
 .soundcloud-player {
+
     display: block;
 
     width: 100%;
@@ -391,22 +522,25 @@ a {
 
 
 /* =========================================================
-   BANDCAMP
+   BANDCAMP RELEASE
 ========================================================= */
 
 .release-box {
+
     min-height: 350px;
 
     padding: 25px;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
 
     background:
         linear-gradient(
             135deg,
-            rgba(112,0,0,0.11),
+            rgba(112, 0, 0, 0.11),
             transparent 60%
         ),
         #050505;
@@ -419,20 +553,26 @@ a {
         transform 0.3s ease;
 }
 
+
 .release-box:hover {
+
     border-color:
-        rgba(112,0,0,0.7);
+        rgba(112, 0, 0, 0.7);
 
     transform:
         translateY(-3px);
 }
 
+
 .release-content {
+
     margin:
         auto 0;
 }
 
+
 .release-label {
+
     display: block;
 
     margin-bottom: 18px;
@@ -444,10 +584,13 @@ a {
         monospace;
 
     font-size: 7px;
+
     letter-spacing: 0.2em;
 }
 
+
 .release-content h3 {
+
     font-size:
         clamp(
             45px,
@@ -459,25 +602,32 @@ a {
 
     font-weight: 900;
 
-    letter-spacing: -0.03em;
+    letter-spacing:
+        -0.03em;
 }
 
+
 .release-info {
+
     display: block;
 
     margin-top: 20px;
 
-    color: var(--red);
+    color:
+        var(--red);
 
     font-family:
         "Space Mono",
         monospace;
 
     font-size: 9px;
+
     letter-spacing: 0.2em;
 }
 
+
 .release-footer {
+
     display: flex;
 
     justify-content: space-between;
@@ -489,24 +639,26 @@ a {
         monospace;
 
     font-size: 7px;
+
     letter-spacing: 0.15em;
 }
 
 
 /* =========================================================
    LABELS
-   TEXT ONLY
-   NO LABEL LOGOS
 ========================================================= */
 
 .labels-list {
+
     max-width: 1100px;
 
     border-top:
         1px solid var(--line);
 }
 
+
 .label-row {
+
     min-height: 105px;
 
     display: grid;
@@ -526,14 +678,18 @@ a {
         padding-left 0.25s ease;
 }
 
+
 .label-row:hover {
+
     padding-left: 15px;
 
     background:
-        rgba(112,0,0,0.06);
+        rgba(112, 0, 0, 0.06);
 }
 
+
 .label-number {
+
     color: #3b3b3b;
 
     font-family:
@@ -543,7 +699,9 @@ a {
     font-size: 7px;
 }
 
+
 .label-row strong {
+
     font-size:
         clamp(
             25px,
@@ -553,11 +711,15 @@ a {
 
     font-weight: 800;
 
-    letter-spacing: -0.01em;
+    letter-spacing:
+        -0.01em;
 }
 
+
 .label-arrow {
-    color: var(--red);
+
+    color:
+        var(--red);
 
     font-size: 17px;
 }
@@ -568,6 +730,7 @@ a {
 ========================================================= */
 
 .about-grid {
+
     max-width: 1100px;
 
     display: grid;
@@ -581,26 +744,36 @@ a {
     align-items: center;
 }
 
+
 .about-big {
+
+    margin-top: 20px;
+
     font-size:
         clamp(
-            75px,
-            9vw,
-            130px
+            65px,
+            8vw,
+            110px
         );
 
     line-height: 0.78;
 
     font-weight: 900;
 
-    letter-spacing: -0.04em;
+    letter-spacing:
+        -0.04em;
 }
+
 
 .about-big span {
-    color: var(--red);
+
+    color:
+        var(--red);
 }
 
+
 .about-copy {
+
     color: #707070;
 
     font-family:
@@ -612,17 +785,23 @@ a {
     line-height: 2;
 }
 
+
 .about-location {
+
     margin-bottom: 30px;
 
-    color: var(--red);
+    color:
+        var(--red);
 
     font-size: 7px;
 
-    letter-spacing: 0.2em;
+    letter-spacing:
+        0.2em;
 }
 
+
 .about-copy p + p {
+
     margin-top: 22px;
 }
 
@@ -632,6 +811,7 @@ a {
 ========================================================= */
 
 .social-list {
+
     max-width: 1100px;
 
     display: grid;
@@ -647,7 +827,9 @@ a {
         1px solid var(--line);
 }
 
+
 .social-list a {
+
     min-height: 85px;
 
     padding:
@@ -673,14 +855,18 @@ a {
         padding-left 0.25s ease;
 }
 
+
 .social-list a:hover {
+
     padding-left: 30px;
 
     background:
-        rgba(112,0,0,0.06);
+        rgba(112, 0, 0, 0.06);
 }
 
+
 .social-list span {
+
     color: #3d3d3d;
 
     font-family:
@@ -690,7 +876,9 @@ a {
     font-size: 7px;
 }
 
+
 .social-list strong {
+
     color: #888;
 
     font-family:
@@ -699,11 +887,15 @@ a {
 
     font-size: 8px;
 
-    letter-spacing: 0.18em;
+    letter-spacing:
+        0.18em;
 }
 
+
 .social-list b {
-    color: var(--red);
+
+    color:
+        var(--red);
 
     font-size: 15px;
 
@@ -716,18 +908,21 @@ a {
 ========================================================= */
 
 .final-section {
+
     position: relative;
 
     width: 90vw;
+
     max-width: 1250px;
 
-    min-height: 420px;
+    min-height: 430px;
 
     margin: 0 auto;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     overflow: hidden;
@@ -736,29 +931,45 @@ a {
         1px solid var(--line);
 }
 
+
 .final-art {
+
     position: absolute;
 
     width:
-        min(520px, 70vw);
+        min(560px, 75vw);
 
-    opacity: 0.08;
+    max-width: 560px;
 
-    mix-blend-mode: screen;
+    opacity:
+        0.13;
+
+    mix-blend-mode:
+        screen;
 
     pointer-events: none;
 }
 
+
 .final-content {
+
     position: relative;
 
     z-index: 2;
 
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    align-items: center;
+
     text-align: center;
 }
 
-.final-content > span {
-    display: block;
+
+.final-content span {
 
     color: #555;
 
@@ -768,7 +979,8 @@ a {
 
     font-size: 7px;
 
-    letter-spacing: 0.22em;
+    letter-spacing:
+        0.22em;
 }
 
 
@@ -777,7 +989,9 @@ a {
 ========================================================= */
 
 .footer {
+
     width: 90vw;
+
     max-width: 1250px;
 
     min-height: 65px;
@@ -787,6 +1001,7 @@ a {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     color: #3b3b3b;
@@ -808,18 +1023,29 @@ a {
 @media (max-width: 900px) {
 
     .music-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
+
 
     .soundcloud-box {
-        max-width: 525px;
+
+        width: 525px;
+
+        max-width: 100%;
     }
+
 
     .about-grid {
-        grid-template-columns: 1fr;
 
-        gap: 55px;
+        grid-template-columns:
+            1fr;
+
+        gap:
+            55px;
     }
+
 }
 
 
@@ -830,31 +1056,36 @@ a {
 @media (max-width: 650px) {
 
     .header {
+
         width: 90vw;
 
         height: 60px;
 
         grid-template-columns:
-            1fr
-            auto;
+            1fr auto;
     }
 
+
     .navigation {
+
         display: none;
     }
 
+
     .brand {
+
         font-size: 18px;
     }
 
+
     .header-info {
+
         font-size: 6px;
     }
 
 
-    /* HERO */
-
     .hero {
+
         width: 90vw;
 
         min-height:
@@ -864,47 +1095,75 @@ a {
             25px 0 30px;
     }
 
+
     .hero-top {
+
         font-size: 6px;
     }
 
+
     .artwork {
-        width: 92vw;
+
+        width:
+            92vw;
+
+        max-width:
+            520px;
     }
+
+
+    .artist-subtitle {
+
+        margin-top: 15px;
+
+        font-size: 6px;
+
+        letter-spacing:
+            0.14em;
+    }
+
 
     .hero-bottom {
-        gap: 10px;
 
-        font-size: 5px;
+        gap:
+            10px;
+
+        font-size:
+            5px;
     }
 
 
-    /* SECTIONS */
-
     .section {
+
         width: 90vw;
 
         padding:
             75px 0;
     }
 
+
     .section-title {
+
         margin-bottom:
             30px;
     }
 
 
-    /* SOUNDCLOUD */
+    .soundcloud-box {
+
+        width: 100%;
+    }
+
 
     .soundcloud-player {
+
         height:
             300px;
     }
 
 
-    /* BANDCAMP */
-
     .release-box {
+
         min-height:
             300px;
 
@@ -912,15 +1171,16 @@ a {
             20px;
     }
 
+
     .release-content h3 {
+
         font-size:
             52px;
     }
 
 
-    /* LABELS */
-
     .label-row {
+
         min-height:
             85px;
 
@@ -930,67 +1190,83 @@ a {
             25px;
     }
 
+
     .label-row strong {
+
         font-size:
             23px;
     }
 
 
-    /* ABOUT */
-
     .about-grid {
+
         gap:
             50px;
     }
 
+
     .about-big {
+
         font-size:
             20vw;
     }
 
+
     .about-copy {
+
         font-size:
             9px;
     }
 
 
-    /* SOCIAL */
-
     .social-list {
+
         grid-template-columns:
             1fr;
     }
 
+
     .social-list a {
+
         min-height:
             70px;
     }
 
-
-    /* FINAL */
 
     .final-section {
+
         min-height:
-            380px;
+            400px;
     }
+
 
     .final-art {
+
         width:
-            90vw;
+            95vw;
     }
 
 
-    /* FOOTER */
+    .final-content span {
+
+        font-size:
+            6px;
+    }
+
 
     .footer {
-        width: 90vw;
+
+        width:
+            90vw;
 
         min-height:
             70px;
 
-        gap: 10px;
+        gap:
+            10px;
 
         font-size:
             5px;
     }
+
 }
