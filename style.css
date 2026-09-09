@@ -116,7 +116,7 @@ img {
 
 .brand {
 
-    font-size: 21px;
+    font-size: 22px;
 
     font-weight: 900;
 
@@ -141,13 +141,13 @@ img {
 
 .navigation a {
 
-    color: #555;
+    color: #666;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing: 0.15em;
 
@@ -166,13 +166,13 @@ img {
 
     justify-self: end;
 
-    color: #444;
+    color: #555;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing: 0.18em;
 }
@@ -213,13 +213,13 @@ img {
 
     justify-content: space-between;
 
-    color: #444;
+    color: #555;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing: 0.2em;
 }
@@ -243,8 +243,8 @@ img {
 
     /*
        Optical correction:
-       moves the logo and genre line
-       slightly upward.
+       keeps the logo visually centered
+       inside the hero area.
     */
 
     transform:
@@ -281,16 +281,14 @@ img {
 
     object-fit: contain;
 
-    mix-blend-mode: screen;
+    mix-blend-mode:
+        screen;
 
     filter:
         contrast(1.08);
 
-    /*
-       Keeps image itself centered.
-    */
-
-    margin: 0 auto;
+    transform:
+        translateY(0);
 
     transition:
         transform 0.4s ease;
@@ -306,20 +304,20 @@ img {
 
 /* =========================================================
    GENRE TEXT
-   NO EXTRA AZZIZ LETTERING
+   NO AZZIZ LETTERING UNDER LOGO
 ========================================================= */
 
 .artist-subtitle {
 
-    margin-top: 8px;
+    margin-top: 10px;
 
-    color: #666;
+    color: #777;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing: 0.22em;
 
@@ -333,12 +331,12 @@ img {
 
     display: inline-block;
 
-    width: 30px;
+    width: 32px;
 
     height: 1px;
 
     margin:
-        0 12px 3px 0;
+        0 13px 3px 0;
 
     background:
         var(--red);
@@ -362,13 +360,13 @@ img {
 
     gap: 20px;
 
-    color: #444;
+    color: #555;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing: 0.18em;
 }
@@ -416,7 +414,7 @@ img {
 
     align-items: center;
 
-    gap: 14px;
+    gap: 15px;
 
     margin-bottom: 40px;
 }
@@ -431,15 +429,15 @@ img {
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 }
 
 
 .section-title h2 {
 
-    color: #777;
+    color: #888;
 
-    font-size: 12px;
+    font-size: 13px;
 
     font-weight: 600;
 
@@ -497,13 +495,13 @@ img {
 
     justify-content: space-between;
 
-    color: #555;
+    color: #666;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing: 0.15em;
 }
@@ -511,7 +509,7 @@ img {
 
 .box-header a {
 
-    color: #444;
+    color: #555;
 
     transition:
         color 0.25s ease;
@@ -523,6 +521,8 @@ img {
     color: #fff;
 }
 
+
+/* SoundCloud player */
 
 .soundcloud-player {
 
@@ -592,13 +592,13 @@ img {
 
     margin-bottom: 18px;
 
-    color: #555;
+    color: #666;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing: 0.2em;
 }
@@ -635,7 +635,7 @@ img {
         "Space Mono",
         monospace;
 
-    font-size: 9px;
+    font-size: 10px;
 
     letter-spacing: 0.2em;
 }
@@ -647,13 +647,13 @@ img {
 
     justify-content: space-between;
 
-    color: #555;
+    color: #666;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing: 0.15em;
 }
@@ -705,13 +705,13 @@ img {
 
 .label-number {
 
-    color: #3b3b3b;
+    color: #444;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 }
 
 
@@ -719,7 +719,7 @@ img {
 
     font-size:
         clamp(
-            25px,
+            26px,
             4vw,
             52px
         );
@@ -736,7 +736,7 @@ img {
     color:
         var(--red);
 
-    font-size: 17px;
+    font-size: 18px;
 }
 
 
@@ -789,13 +789,13 @@ img {
 
 .about-copy {
 
-    color: #707070;
+    color: #777;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 10px;
+    font-size: 11px;
 
     line-height: 2;
 }
@@ -808,7 +808,7 @@ img {
     color:
         var(--red);
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing:
         0.2em;
@@ -882,25 +882,25 @@ img {
 
 .social-list span {
 
-    color: #3d3d3d;
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 7px;
-}
-
-
-.social-list strong {
-
-    color: #888;
+    color: #444;
 
     font-family:
         "Space Mono",
         monospace;
 
     font-size: 8px;
+}
+
+
+.social-list strong {
+
+    color: #999;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 9px;
 
     letter-spacing:
         0.18em;
@@ -912,7 +912,7 @@ img {
     color:
         var(--red);
 
-    font-size: 15px;
+    font-size: 16px;
 
     font-weight: 400;
 }
@@ -951,17 +951,10 @@ img {
 
     position: absolute;
 
-    left: 50%;
-
-    top: 50%;
-
     width:
         min(560px, 75vw);
 
     max-width: 560px;
-
-    transform:
-        translate(-50%, -50%);
 
     opacity:
         0.13;
@@ -993,13 +986,13 @@ img {
 
 .final-content span {
 
-    color: #555;
+    color: #666;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing:
         0.22em;
@@ -1026,13 +1019,13 @@ img {
 
     justify-content: space-between;
 
-    color: #3b3b3b;
+    color: #444;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing: 0.15em;
 }
@@ -1046,15 +1039,15 @@ img {
 
     position: fixed;
 
-    right: 18px;
+    right: 22px;
 
-    bottom: 15px;
+    bottom: 18px;
 
-    z-index: 99999;
+    z-index: 9999;
 
-    min-width: 125px;
+    min-width: 130px;
 
-    height: 30px;
+    height: 31px;
 
     padding:
         0 11px;
@@ -1065,27 +1058,27 @@ img {
 
     justify-content: center;
 
-    gap: 7px;
+    gap: 8px;
 
     background:
         rgba(0, 0, 0, 0.94);
 
     border:
-        1px solid rgba(255, 255, 255, 0.12);
+        1px solid rgba(255, 255, 255, 0.14);
 
-    color: #555;
+    color: #666;
 
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 7px;
+    font-size: 8px;
 
     letter-spacing:
         0.12em;
 
     box-shadow:
-        0 0 20px rgba(0, 0, 0, 0.8);
+        0 0 20px rgba(0, 0, 0, 0.7);
 
     pointer-events: none;
 }
@@ -1112,17 +1105,17 @@ img {
 
 .counter-label {
 
-    color: #555;
+    color: #666;
 }
 
 
 .counter-number {
 
-    min-width: 34px;
+    min-width: 36px;
 
     text-align: right;
 
-    color: #999;
+    color: #aaa;
 
     font-weight: 700;
 }
@@ -1187,13 +1180,13 @@ img {
 
     .brand {
 
-        font-size: 18px;
+        font-size: 19px;
     }
 
 
     .header-info {
 
-        font-size: 6px;
+        font-size: 7px;
     }
 
 
@@ -1211,14 +1204,9 @@ img {
 
     .hero-top {
 
-        font-size: 6px;
+        font-size: 7px;
     }
 
-
-    /*
-       Mobile optical correction.
-       Keeps the logo centered but slightly higher.
-    */
 
     .hero-center {
 
@@ -1240,24 +1228,24 @@ img {
     }
 
 
-    .artwork img {
-
-        width: 100%;
-
-        margin: 0 auto;
-    }
-
-
     .artist-subtitle {
 
         margin-top:
             12px;
 
         font-size:
-            6px;
+            7px;
 
         letter-spacing:
             0.14em;
+    }
+
+
+    .artist-subtitle::before {
+
+        width: 25px;
+
+        margin-right: 10px;
     }
 
 
@@ -1267,7 +1255,7 @@ img {
             10px;
 
         font-size:
-            5px;
+            6px;
     }
 
 
@@ -1287,10 +1275,16 @@ img {
     }
 
 
+    .section-title h2 {
+
+        font-size:
+            12px;
+    }
+
+
     .soundcloud-box {
 
-        width:
-            100%;
+        width: 100%;
     }
 
 
@@ -1298,6 +1292,13 @@ img {
 
         height:
             300px;
+    }
+
+
+    .box-header {
+
+        font-size:
+            7px;
     }
 
 
@@ -1354,7 +1355,17 @@ img {
     .about-copy {
 
         font-size:
-            9px;
+            10px;
+
+        line-height:
+            1.9;
+    }
+
+
+    .about-location {
+
+        font-size:
+            7px;
     }
 
 
@@ -1372,6 +1383,13 @@ img {
     }
 
 
+    .social-list strong {
+
+        font-size:
+            8px;
+    }
+
+
     .final-section {
 
         min-height:
@@ -1383,16 +1401,13 @@ img {
 
         width:
             95vw;
-
-        max-width:
-            520px;
     }
 
 
     .final-content span {
 
         font-size:
-            6px;
+            7px;
     }
 
 
@@ -1408,7 +1423,7 @@ img {
             10px;
 
         font-size:
-            5px;
+            6px;
 
         padding-bottom:
             35px;
@@ -1426,16 +1441,16 @@ img {
             10px;
 
         height:
-            27px;
+            28px;
 
         min-width:
-            112px;
+            116px;
 
         padding:
             0 8px;
 
         font-size:
-            6px;
+            7px;
     }
 
 }
