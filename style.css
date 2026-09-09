@@ -1,8 +1,12 @@
 /* =========================================================
-   AZZIZ — DARKPSY
+   AZZIZ — DARKPSY WEBSITE
    CLEAN / DARK / UNDERGROUND
 ========================================================= */
 
+
+/* =========================
+   RESET
+========================= */
 
 * {
     box-sizing: border-box;
@@ -35,11 +39,16 @@ a {
 }
 
 
+/* =========================
+   VARIABLES
+========================= */
+
 :root {
 
     --black: #000000;
-    --dark: #060606;
+    --dark: #050505;
     --white: #eeeeee;
+
     --grey: #666666;
     --dark-grey: #333333;
 
@@ -49,10 +58,9 @@ a {
 }
 
 
-/* =========================================================
+/* =========================
    PAGE
-========================================================= */
-
+========================= */
 
 .page {
     min-height: 100vh;
@@ -60,8 +68,8 @@ a {
     background:
         radial-gradient(
             circle at 50% 20%,
-            rgba(90,0,0,0.07),
-            transparent 35%
+            rgba(90,0,0,0.08),
+            transparent 38%
         ),
         #000;
 }
@@ -71,8 +79,8 @@ a {
    HEADER
 ========================================================= */
 
-
 .header {
+
     width: 90vw;
     max-width: 1250px;
 
@@ -95,6 +103,7 @@ a {
 
 
 .brand {
+
     font-size: 21px;
 
     font-weight: 900;
@@ -109,6 +118,7 @@ a {
 
 
 .navigation {
+
     display: flex;
 
     gap: 30px;
@@ -116,6 +126,7 @@ a {
 
 
 .navigation a {
+
     color: #555;
 
     font-family:
@@ -137,6 +148,7 @@ a {
 
 
 .header-info {
+
     justify-self: end;
 
     color: #444;
@@ -155,8 +167,8 @@ a {
    HERO
 ========================================================= */
 
-
 .hero {
+
     width: 90vw;
     max-width: 1250px;
 
@@ -180,6 +192,7 @@ a {
 
 
 .hero-top {
+
     display: flex;
 
     justify-content: space-between;
@@ -200,8 +213,8 @@ a {
    HERO ARTWORK
 ========================================================= */
 
-
 .hero-center {
+
     flex: 1;
 
     display: flex;
@@ -215,6 +228,7 @@ a {
 
 
 .artwork {
+
     width:
         min(560px, 68vw);
 
@@ -229,6 +243,7 @@ a {
 
 
 .artwork img {
+
     display: block;
 
     width: 100%;
@@ -236,10 +251,16 @@ a {
 
     object-fit: contain;
 
+    /*
+       Your JPG already has a black background.
+       Screen mode makes that black blend into
+       the website background.
+    */
+
     mix-blend-mode: screen;
 
     filter:
-        contrast(1.05);
+        contrast(1.08);
 
     transition:
         transform 0.4s ease;
@@ -252,11 +273,11 @@ a {
 
 
 /* =========================================================
-   CLEAN AZZIZ LETTERING
+   AZZIZ LETTERING
 ========================================================= */
 
-
 .artist-title {
+
     position: relative;
 
     z-index: 3;
@@ -268,6 +289,7 @@ a {
 
 
 .artist-title h1 {
+
     font-family:
         "Barlow Condensed",
         Arial,
@@ -297,6 +319,7 @@ a {
 
 
 .artist-subtitle {
+
     margin-top: 18px;
 
     color: #666;
@@ -313,6 +336,7 @@ a {
 
 
 .artist-subtitle::before {
+
     content: "";
 
     display: inline-block;
@@ -333,8 +357,8 @@ a {
    HERO BOTTOM
 ========================================================= */
 
-
 .hero-bottom {
+
     display: grid;
 
     grid-template-columns:
@@ -359,6 +383,7 @@ a {
 
 
 .hero-line {
+
     height: 1px;
 
     background:
@@ -376,8 +401,8 @@ a {
    SECTIONS
 ========================================================= */
 
-
 .section {
+
     width: 90vw;
     max-width: 1250px;
 
@@ -392,6 +417,7 @@ a {
 
 
 .section-title {
+
     display: flex;
 
     align-items: center;
@@ -403,6 +429,7 @@ a {
 
 
 .section-title span {
+
     color:
         var(--red);
 
@@ -415,6 +442,7 @@ a {
 
 
 .section-title h2 {
+
     color: #777;
 
     font-size: 12px;
@@ -429,8 +457,8 @@ a {
    MUSIC
 ========================================================= */
 
-
 .music-grid {
+
     max-width: 1100px;
 
     display: grid;
@@ -444,6 +472,7 @@ a {
 
 
 .soundcloud-box {
+
     padding: 10px;
 
     background:
@@ -455,6 +484,7 @@ a {
 
 
 .box-header {
+
     height: 35px;
 
     padding: 0 5px;
@@ -478,6 +508,7 @@ a {
 
 
 .box-header a {
+
     color: #444;
 
     transition:
@@ -490,10 +521,10 @@ a {
 }
 
 
-/* SMALLER SOUNDCLOUD PLAYER */
-
+/* SMALL SOUNDCloud PLAYER */
 
 .soundcloud-player {
+
     display: block;
 
     width: 100%;
@@ -508,8 +539,8 @@ a {
    BANDCAMP RELEASE
 ========================================================= */
 
-
 .release-box {
+
     min-height: 350px;
 
     padding: 25px;
@@ -538,6 +569,7 @@ a {
 
 
 .release-box:hover {
+
     border-color:
         rgba(112,0,0,0.7);
 
@@ -553,6 +585,7 @@ a {
 
 
 .release-label {
+
     display: block;
 
     margin-bottom: 18px;
@@ -570,6 +603,7 @@ a {
 
 
 .release-content h3 {
+
     font-size:
         clamp(
             45px,
@@ -587,6 +621,7 @@ a {
 
 
 .release-info {
+
     display: block;
 
     margin-top: 20px;
@@ -605,6 +640,7 @@ a {
 
 
 .release-footer {
+
     display: flex;
 
     justify-content: space-between;
@@ -625,8 +661,8 @@ a {
    LABELS
 ========================================================= */
 
-
 .labels-list {
+
     max-width: 1100px;
 
     border-top:
@@ -635,6 +671,7 @@ a {
 
 
 .label-row {
+
     min-height: 105px;
 
     display: grid;
@@ -656,6 +693,7 @@ a {
 
 
 .label-row:hover {
+
     padding-left: 15px;
 
     background:
@@ -664,6 +702,7 @@ a {
 
 
 .label-number {
+
     color: #3b3b3b;
 
     font-family:
@@ -675,6 +714,7 @@ a {
 
 
 .label-row strong {
+
     font-size:
         clamp(
             25px,
@@ -690,6 +730,7 @@ a {
 
 
 .label-arrow {
+
     color:
         var(--red);
 
@@ -701,8 +742,8 @@ a {
    ABOUT
 ========================================================= */
 
-
 .about-grid {
+
     max-width: 1100px;
 
     display: grid;
@@ -718,6 +759,7 @@ a {
 
 
 .artist-word {
+
     font-size:
         clamp(
             70px,
@@ -735,6 +777,7 @@ a {
 
 
 .about-big {
+
     margin-top: 35px;
 
     font-size:
@@ -760,6 +803,7 @@ a {
 
 
 .about-copy {
+
     color: #707070;
 
     font-family:
@@ -773,6 +817,7 @@ a {
 
 
 .about-location {
+
     margin-bottom: 30px;
 
     color:
@@ -794,8 +839,8 @@ a {
    SOCIAL
 ========================================================= */
 
-
 .social-list {
+
     max-width: 1100px;
 
     display: grid;
@@ -812,6 +857,7 @@ a {
 
 
 .social-list a {
+
     min-height: 85px;
 
     padding:
@@ -839,6 +885,7 @@ a {
 
 
 .social-list a:hover {
+
     padding-left: 30px;
 
     background:
@@ -847,6 +894,7 @@ a {
 
 
 .social-list span {
+
     color: #3d3d3d;
 
     font-family:
@@ -858,6 +906,7 @@ a {
 
 
 .social-list strong {
+
     color: #888;
 
     font-family:
@@ -872,6 +921,7 @@ a {
 
 
 .social-list b {
+
     color:
         var(--red);
 
@@ -882,11 +932,11 @@ a {
 
 
 /* =========================================================
-   FINAL SECTION
+   FINAL ARTWORK
 ========================================================= */
 
-
 .final-section {
+
     position: relative;
 
     width: 90vw;
@@ -910,6 +960,7 @@ a {
 
 
 .final-art {
+
     position: absolute;
 
     width:
@@ -920,10 +971,13 @@ a {
 
     mix-blend-mode:
         screen;
+
+    pointer-events: none;
 }
 
 
 .final-content {
+
     position: relative;
 
     z-index: 2;
@@ -933,16 +987,30 @@ a {
 
 
 .final-word {
+
+    font-family:
+        "Barlow Condensed",
+        Arial,
+        sans-serif;
+
     font-size:
         clamp(
             70px,
             10vw,
             140px
         );
+
+    line-height: 0.8;
+
+    font-weight: 800;
+
+    letter-spacing:
+        0.08em;
 }
 
 
 .final-content > span {
+
     display: block;
 
     margin-top: 20px;
@@ -964,8 +1032,8 @@ a {
    FOOTER
 ========================================================= */
 
-
 .footer {
+
     width: 90vw;
     max-width: 1250px;
 
@@ -996,26 +1064,29 @@ a {
    TABLET
 ========================================================= */
 
-
 @media (max-width: 900px) {
 
     .music-grid {
+
         grid-template-columns:
             1fr;
     }
 
 
     .soundcloud-box {
+
         max-width:
             525px;
     }
 
 
     .about-grid {
+
         grid-template-columns:
             1fr;
 
-        gap: 55px;
+        gap:
+            55px;
     }
 
 }
@@ -1025,10 +1096,10 @@ a {
    MOBILE
 ========================================================= */
 
-
 @media (max-width: 650px) {
 
     .header {
+
         width: 90vw;
 
         height: 60px;
@@ -1054,6 +1125,7 @@ a {
 
 
     .hero {
+
         width: 90vw;
 
         min-height:
@@ -1070,18 +1142,21 @@ a {
 
 
     .artwork {
+
         width:
             94vw;
     }
 
 
     .artist-title {
+
         margin-top:
             -20px;
     }
 
 
     .artist-title h1 {
+
         font-size:
             72px;
 
@@ -1091,7 +1166,9 @@ a {
 
 
     .artist-subtitle {
-        font-size: 6px;
+
+        font-size:
+            6px;
 
         letter-spacing:
             0.14em;
@@ -1099,13 +1176,17 @@ a {
 
 
     .hero-bottom {
-        gap: 10px;
 
-        font-size: 5px;
+        gap:
+            10px;
+
+        font-size:
+            5px;
     }
 
 
     .section {
+
         width: 90vw;
 
         padding:
@@ -1114,20 +1195,21 @@ a {
 
 
     .section-title {
+
         margin-bottom:
             30px;
     }
 
 
-    /* MOBILE SOUNDCLOUD */
-
     .soundcloud-player {
+
         height:
             300px;
     }
 
 
     .release-box {
+
         min-height:
             300px;
 
@@ -1137,12 +1219,14 @@ a {
 
 
     .release-content h3 {
+
         font-size:
             52px;
     }
 
 
     .label-row {
+
         min-height:
             85px;
 
@@ -1154,74 +1238,87 @@ a {
 
 
     .label-row strong {
+
         font-size:
             23px;
     }
 
 
     .about-grid {
+
         gap:
             50px;
     }
 
 
     .artist-word {
+
         font-size:
             75px;
     }
 
 
     .about-big {
+
         font-size:
             20vw;
     }
 
 
     .about-copy {
+
         font-size:
             9px;
     }
 
 
     .social-list {
+
         grid-template-columns:
             1fr;
     }
 
 
     .social-list a {
+
         min-height:
             70px;
     }
 
 
     .final-section {
+
         min-height:
             450px;
     }
 
 
     .final-art {
+
         width:
             95vw;
     }
 
 
     .final-word {
+
         font-size:
             75px;
     }
 
 
     .footer {
+
         width: 90vw;
 
         min-height:
             70px;
 
-        gap: 10px;
+        gap:
+            10px;
 
-        font-size: 5px;
+        font-size:
+            5px;
     }
 
 }
