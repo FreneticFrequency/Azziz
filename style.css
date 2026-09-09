@@ -1,7 +1,8 @@
 /* =========================================================
-   AZZIZ
-   DARKPSY WEBSITE
+   AZZIZ — DARKPSY
+   CLEAN / DARK / UNDERGROUND
 ========================================================= */
+
 
 * {
     box-sizing: border-box;
@@ -9,13 +10,15 @@
     padding: 0;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     background: #000;
-    color: #ededed;
+    color: #eeeeee;
 
     font-family:
         "Barlow Condensed",
@@ -25,18 +28,23 @@ body {
     overflow-x: hidden;
 }
 
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
+
 :root {
+
     --black: #000000;
-    --dark: #070707;
-    --white: #ededed;
-    --grey: #707070;
-    --dark-grey: #363636;
-    --red: #720000;
+    --dark: #060606;
+    --white: #eeeeee;
+    --grey: #666666;
+    --dark-grey: #333333;
+
+    --red: #700000;
+
     --line: rgba(255,255,255,0.12);
 }
 
@@ -45,9 +53,17 @@ a {
    PAGE
 ========================================================= */
 
+
 .page {
     min-height: 100vh;
-    background: #000;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(90,0,0,0.07),
+            transparent 35%
+        ),
+        #000;
 }
 
 
@@ -55,38 +71,51 @@ a {
    HEADER
 ========================================================= */
 
-.header {
-    height: 70px;
 
+.header {
     width: 90vw;
     max-width: 1250px;
+
+    height: 70px;
 
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
 
     align-items: center;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 }
 
-.logo {
-    font-size: 22px;
+
+.brand {
+    font-size: 21px;
+
     font-weight: 900;
-    letter-spacing: 0.12em;
+
+    letter-spacing: 0.13em;
 }
 
-.logo span {
+
+.brand span {
     color: var(--red);
 }
 
-.header nav {
+
+.navigation {
     display: flex;
-    gap: 28px;
+
+    gap: 30px;
 }
 
-.header nav a {
+
+.navigation a {
     color: #555;
 
     font-family:
@@ -95,16 +124,19 @@ a {
 
     font-size: 7px;
 
-    letter-spacing: 0.16em;
+    letter-spacing: 0.15em;
 
-    transition: color 0.25s ease;
+    transition:
+        color 0.25s ease;
 }
 
-.header nav a:hover {
+
+.navigation a:hover {
     color: #fff;
 }
 
-.location {
+
+.header-info {
     justify-self: end;
 
     color: #444;
@@ -123,27 +155,33 @@ a {
    HERO
 ========================================================= */
 
+
 .hero {
-    position: relative;
-
-    min-height: calc(100vh - 70px);
-
     width: 90vw;
     max-width: 1250px;
 
+    min-height:
+        calc(100vh - 70px);
+
     margin: 0 auto;
 
-    padding: 30px 0 35px;
+    padding:
+        28px 0 35px;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 }
+
 
 .hero-top {
     display: flex;
+
     justify-content: space-between;
 
     color: #444;
@@ -157,28 +195,40 @@ a {
     letter-spacing: 0.2em;
 }
 
-.logo-area {
-    display: flex;
-    flex-direction: column;
 
-    align-items: center;
+/* =========================================================
+   HERO ARTWORK
+========================================================= */
+
+
+.hero-center {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
 
     justify-content: center;
 
-    flex: 1;
+    align-items: center;
 }
 
-.logo-frame {
-    width: min(540px, 70vw);
+
+.artwork {
+    width:
+        min(560px, 68vw);
 
     aspect-ratio: 1 / 1;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
-.azziz-logo {
+
+.artwork img {
     display: block;
 
     width: 100%;
@@ -188,32 +238,65 @@ a {
 
     mix-blend-mode: screen;
 
-    filter: contrast(1.05);
+    filter:
+        contrast(1.05);
+
+    transition:
+        transform 0.4s ease;
 }
 
-.hero-name {
-    margin-top: -40px;
 
+.artwork img:hover {
+    transform: scale(1.015);
+}
+
+
+/* =========================================================
+   CLEAN AZZIZ LETTERING
+========================================================= */
+
+
+.artist-title {
     position: relative;
-    z-index: 2;
+
+    z-index: 3;
+
+    margin-top: -25px;
 
     text-align: center;
 }
 
-.gothic-name {
+
+.artist-title h1 {
     font-family:
-        "UnifrakturCook",
-        "Times New Roman",
-        serif;
+        "Barlow Condensed",
+        Arial,
+        sans-serif;
 
-    font-size: clamp(70px, 9vw, 135px);
+    font-size:
+        clamp(
+            70px,
+            10vw,
+            140px
+        );
 
-    line-height: 0.8;
+    line-height: 0.78;
+
+    font-weight: 800;
+
+    letter-spacing:
+        0.08em;
 
     color: #f1f1f1;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 30px rgba(0,0,0,0.9);
 }
 
-.hero-sub {
+
+.artist-subtitle {
     margin-top: 18px;
 
     color: #666;
@@ -224,13 +307,40 @@ a {
 
     font-size: 7px;
 
-    letter-spacing: 0.22em;
+    letter-spacing:
+        0.22em;
 }
+
+
+.artist-subtitle::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 30px;
+
+    height: 1px;
+
+    margin:
+        0 12px 3px 0;
+
+    background:
+        var(--red);
+}
+
+
+/* =========================================================
+   HERO BOTTOM
+========================================================= */
+
 
 .hero-bottom {
     display: grid;
 
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns:
+        auto
+        1fr
+        auto;
 
     align-items: center;
 
@@ -247,14 +357,18 @@ a {
     letter-spacing: 0.18em;
 }
 
-.hero-bottom .line {
+
+.hero-line {
     height: 1px;
 
-    background: var(--line);
+    background:
+        var(--line);
 }
 
+
 .red {
-    color: var(--red);
+    color:
+        var(--red);
 }
 
 
@@ -262,29 +376,35 @@ a {
    SECTIONS
 ========================================================= */
 
+
 .section {
     width: 90vw;
     max-width: 1250px;
 
     margin: 0 auto;
 
-    padding: 110px 0;
+    padding:
+        110px 0;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 }
 
-.section-heading {
+
+.section-title {
     display: flex;
 
     align-items: center;
 
-    gap: 15px;
+    gap: 14px;
 
     margin-bottom: 40px;
 }
 
-.section-heading span {
-    color: var(--red);
+
+.section-title span {
+    color:
+        var(--red);
 
     font-family:
         "Space Mono",
@@ -293,8 +413,11 @@ a {
     font-size: 7px;
 }
 
-.section-heading h2 {
-    font-size: 13px;
+
+.section-title h2 {
+    color: #777;
+
+    font-size: 12px;
 
     font-weight: 600;
 
@@ -306,7 +429,10 @@ a {
    MUSIC
 ========================================================= */
 
+
 .music-grid {
+    max-width: 1100px;
+
     display: grid;
 
     grid-template-columns:
@@ -314,28 +440,30 @@ a {
         minmax(280px, 1fr);
 
     gap: 25px;
-
-    max-width: 1100px;
 }
+
 
 .soundcloud-box {
     padding: 10px;
 
-    background: #050505;
+    background:
+        #050505;
 
-    border: 1px solid var(--line);
+    border:
+        1px solid var(--line);
 }
+
 
 .box-header {
     height: 35px;
 
-    display: flex;
+    padding: 0 5px;
 
-    justify-content: space-between;
+    display: flex;
 
     align-items: center;
 
-    padding: 0 5px;
+    justify-content: space-between;
 
     color: #555;
 
@@ -348,18 +476,22 @@ a {
     letter-spacing: 0.15em;
 }
 
+
 .box-header a {
     color: #444;
 
-    transition: color 0.25s ease;
+    transition:
+        color 0.25s ease;
 }
+
 
 .box-header a:hover {
     color: #fff;
 }
 
 
-/* SMALLER ORIGINAL SOUNDCLOUD WIDGET */
+/* SMALLER SOUNDCLOUD PLAYER */
+
 
 .soundcloud-player {
     display: block;
@@ -373,10 +505,11 @@ a {
 
 
 /* =========================================================
-   BANDCAMP
+   BANDCAMP RELEASE
 ========================================================= */
 
-.bandcamp-box {
+
+.release-box {
     min-height: 350px;
 
     padding: 25px;
@@ -390,27 +523,34 @@ a {
     background:
         linear-gradient(
             135deg,
-            rgba(114,0,0,0.12),
-            transparent 55%
+            rgba(112,0,0,0.11),
+            transparent 60%
         ),
         #050505;
 
-    border: 1px solid var(--line);
+    border:
+        1px solid var(--line);
 
     transition:
         border-color 0.3s ease,
         transform 0.3s ease;
 }
 
-.bandcamp-box:hover {
-    border-color: rgba(114,0,0,0.7);
 
-    transform: translateY(-3px);
+.release-box:hover {
+    border-color:
+        rgba(112,0,0,0.7);
+
+    transform:
+        translateY(-3px);
 }
+
 
 .release-content {
-    margin: auto 0;
+    margin:
+        auto 0;
 }
+
 
 .release-label {
     display: block;
@@ -428,22 +568,31 @@ a {
     letter-spacing: 0.2em;
 }
 
+
 .release-content h3 {
-    font-size: clamp(45px, 6vw, 80px);
+    font-size:
+        clamp(
+            45px,
+            6vw,
+            78px
+        );
 
     line-height: 0.78;
 
     font-weight: 900;
 
-    letter-spacing: -0.04em;
+    letter-spacing:
+        -0.03em;
 }
+
 
 .release-info {
     display: block;
 
     margin-top: 20px;
 
-    color: var(--red);
+    color:
+        var(--red);
 
     font-family:
         "Space Mono",
@@ -453,6 +602,7 @@ a {
 
     letter-spacing: 0.2em;
 }
+
 
 .release-footer {
     display: flex;
@@ -475,40 +625,46 @@ a {
    LABELS
 ========================================================= */
 
-.labels {
+
+.labels-list {
     max-width: 1100px;
 
-    border-top: 1px solid var(--line);
+    border-top:
+        1px solid var(--line);
 }
 
-.label {
-    min-height: 100px;
+
+.label-row {
+    min-height: 105px;
 
     display: grid;
 
     grid-template-columns:
         55px
         1fr
-        35px;
+        30px;
 
     align-items: center;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 
     transition:
         background 0.25s ease,
         padding-left 0.25s ease;
 }
 
-.label:hover {
+
+.label-row:hover {
     padding-left: 15px;
 
     background:
-        rgba(114,0,0,0.06);
+        rgba(112,0,0,0.06);
 }
 
-.label .number {
-    color: #3d3d3d;
+
+.label-number {
+    color: #3b3b3b;
 
     font-family:
         "Space Mono",
@@ -517,16 +673,25 @@ a {
     font-size: 7px;
 }
 
-.label strong {
-    font-size: clamp(25px, 4vw, 52px);
+
+.label-row strong {
+    font-size:
+        clamp(
+            25px,
+            4vw,
+            52px
+        );
 
     font-weight: 800;
 
-    letter-spacing: -0.01em;
+    letter-spacing:
+        -0.01em;
 }
 
-.label .arrow {
-    color: var(--red);
+
+.label-arrow {
+    color:
+        var(--red);
 
     font-size: 17px;
 }
@@ -535,6 +700,7 @@ a {
 /* =========================================================
    ABOUT
 ========================================================= */
+
 
 .about-grid {
     max-width: 1100px;
@@ -550,27 +716,50 @@ a {
     align-items: center;
 }
 
-.about-title .gothic-name {
-    font-size: clamp(80px, 10vw, 145px);
 
-    margin-bottom: 35px;
+.artist-word {
+    font-size:
+        clamp(
+            70px,
+            9vw,
+            130px
+        );
+
+    line-height: 0.8;
+
+    font-weight: 800;
+
+    letter-spacing:
+        0.08em;
 }
 
-.large-title {
-    font-size: clamp(55px, 7vw, 100px);
+
+.about-big {
+    margin-top: 35px;
+
+    font-size:
+        clamp(
+            55px,
+            7vw,
+            95px
+        );
 
     line-height: 0.78;
 
     font-weight: 900;
 
-    letter-spacing: -0.04em;
+    letter-spacing:
+        -0.04em;
 }
 
-.large-title span {
-    color: var(--red);
+
+.about-big span {
+    color:
+        var(--red);
 }
 
-.about-text {
+
+.about-copy {
     color: #707070;
 
     font-family:
@@ -582,17 +771,21 @@ a {
     line-height: 2;
 }
 
-.about-meta {
+
+.about-location {
     margin-bottom: 30px;
 
-    color: var(--red);
+    color:
+        var(--red);
 
     font-size: 7px;
 
-    letter-spacing: 0.2em;
+    letter-spacing:
+        0.2em;
 }
 
-.about-text p + p {
+
+.about-copy p + p {
     margin-top: 22px;
 }
 
@@ -601,22 +794,28 @@ a {
    SOCIAL
 ========================================================= */
 
-.social-grid {
+
+.social-list {
     max-width: 1100px;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
-    border-top: 1px solid var(--line);
+    border-top:
+        1px solid var(--line);
 
-    border-left: 1px solid var(--line);
+    border-left:
+        1px solid var(--line);
 }
 
-.social-grid a {
+
+.social-list a {
     min-height: 85px;
 
-    padding: 0 22px;
+    padding:
+        0 22px;
 
     display: grid;
 
@@ -627,23 +826,27 @@ a {
 
     align-items: center;
 
-    border-right: 1px solid var(--line);
+    border-right:
+        1px solid var(--line);
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 
     transition:
         background 0.25s ease,
         padding-left 0.25s ease;
 }
 
-.social-grid a:hover {
+
+.social-list a:hover {
     padding-left: 30px;
 
     background:
-        rgba(114,0,0,0.06);
+        rgba(112,0,0,0.06);
 }
 
-.social-grid a span {
+
+.social-list span {
     color: #3d3d3d;
 
     font-family:
@@ -653,7 +856,8 @@ a {
     font-size: 7px;
 }
 
-.social-grid strong {
+
+.social-list strong {
     color: #888;
 
     font-family:
@@ -662,11 +866,14 @@ a {
 
     font-size: 8px;
 
-    letter-spacing: 0.18em;
+    letter-spacing:
+        0.18em;
 }
 
-.social-grid b {
-    color: var(--red);
+
+.social-list b {
+    color:
+        var(--red);
 
     font-size: 15px;
 
@@ -675,16 +882,17 @@ a {
 
 
 /* =========================================================
-   FINAL
+   FINAL SECTION
 ========================================================= */
 
-.final {
-    position: relative;
 
-    min-height: 550px;
+.final-section {
+    position: relative;
 
     width: 90vw;
     max-width: 1250px;
+
+    min-height: 500px;
 
     margin: 0 auto;
 
@@ -696,20 +904,26 @@ a {
 
     overflow: hidden;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 }
 
-.final-logo {
+
+.final-art {
     position: absolute;
 
-    width: min(600px, 70vw);
+    width:
+        min(600px, 75vw);
 
-    opacity: 0.12;
+    opacity:
+        0.1;
 
-    mix-blend-mode: screen;
+    mix-blend-mode:
+        screen;
 }
 
-.final-name {
+
+.final-content {
     position: relative;
 
     z-index: 2;
@@ -717,11 +931,18 @@ a {
     text-align: center;
 }
 
-.final-name .gothic-name {
-    font-size: clamp(90px, 12vw, 170px);
+
+.final-word {
+    font-size:
+        clamp(
+            70px,
+            10vw,
+            140px
+        );
 }
 
-.final-name span {
+
+.final-content > span {
     display: block;
 
     margin-top: 20px;
@@ -734,13 +955,15 @@ a {
 
     font-size: 7px;
 
-    letter-spacing: 0.22em;
+    letter-spacing:
+        0.22em;
 }
 
 
 /* =========================================================
    FOOTER
 ========================================================= */
+
 
 .footer {
     width: 90vw;
@@ -764,7 +987,8 @@ a {
 
     font-size: 7px;
 
-    letter-spacing: 0.15em;
+    letter-spacing:
+        0.15em;
 }
 
 
@@ -772,20 +996,26 @@ a {
    TABLET
 ========================================================= */
 
+
 @media (max-width: 900px) {
 
     .music-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-    }
 
     .soundcloud-box {
-        max-width: 525px;
+        max-width:
+            525px;
+    }
+
+
+    .about-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 55px;
     }
 
 }
@@ -795,61 +1025,80 @@ a {
    MOBILE
 ========================================================= */
 
+
 @media (max-width: 650px) {
 
     .header {
-        height: 60px;
-
         width: 90vw;
 
-        grid-template-columns: 1fr auto;
+        height: 60px;
+
+        grid-template-columns:
+            1fr auto;
     }
 
-    .header nav {
+
+    .navigation {
         display: none;
     }
 
-    .logo {
+
+    .brand {
         font-size: 18px;
     }
 
-    .location {
+
+    .header-info {
         font-size: 6px;
     }
 
 
     .hero {
-        min-height: calc(100vh - 60px);
+        width: 90vw;
 
-        padding-top: 25px;
+        min-height:
+            calc(100vh - 60px);
+
+        padding:
+            25px 0 30px;
     }
+
 
     .hero-top {
         font-size: 6px;
     }
 
-    .logo-frame {
-        width: 94vw;
+
+    .artwork {
+        width:
+            94vw;
     }
 
-    .hero-name {
-        margin-top: -25px;
+
+    .artist-title {
+        margin-top:
+            -20px;
     }
 
-    .gothic-name {
-        font-size: 75px;
+
+    .artist-title h1 {
+        font-size:
+            72px;
+
+        letter-spacing:
+            0.07em;
     }
 
-    .hero-sub {
+
+    .artist-subtitle {
         font-size: 6px;
 
-        letter-spacing: 0.15em;
+        letter-spacing:
+            0.14em;
     }
 
-    .hero-bottom {
-        grid-template-columns:
-            auto 1fr auto;
 
+    .hero-bottom {
         gap: 10px;
 
         font-size: 5px;
@@ -857,34 +1106,45 @@ a {
 
 
     .section {
-        padding: 75px 0;
+        width: 90vw;
+
+        padding:
+            75px 0;
     }
 
-    .section-heading {
-        margin-bottom: 30px;
+
+    .section-title {
+        margin-bottom:
+            30px;
     }
 
 
-    /* SMALL MOBILE SOUNDCLOUD */
+    /* MOBILE SOUNDCLOUD */
 
     .soundcloud-player {
-        height: 300px;
+        height:
+            300px;
     }
 
 
-    .bandcamp-box {
-        min-height: 300px;
+    .release-box {
+        min-height:
+            300px;
 
-        padding: 20px;
+        padding:
+            20px;
     }
+
 
     .release-content h3 {
-        font-size: 52px;
+        font-size:
+            52px;
     }
 
 
-    .label {
-        min-height: 85px;
+    .label-row {
+        min-height:
+            85px;
 
         grid-template-columns:
             35px
@@ -892,48 +1152,76 @@ a {
             25px;
     }
 
-    .label strong {
-        font-size: 23px;
+
+    .label-row strong {
+        font-size:
+            23px;
     }
 
 
-    .about-title .gothic-name {
-        font-size: 85px;
-    }
-
-    .large-title {
-        font-size: 20vw;
+    .about-grid {
+        gap:
+            50px;
     }
 
 
-    .social-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .social-grid a {
-        min-height: 70px;
+    .artist-word {
+        font-size:
+            75px;
     }
 
 
-    .final {
-        min-height: 450px;
+    .about-big {
+        font-size:
+            20vw;
     }
 
-    .final-logo {
-        width: 95vw;
+
+    .about-copy {
+        font-size:
+            9px;
     }
 
-    .final-name .gothic-name {
-        font-size: 90px;
+
+    .social-list {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .social-list a {
+        min-height:
+            70px;
+    }
+
+
+    .final-section {
+        min-height:
+            450px;
+    }
+
+
+    .final-art {
+        width:
+            95vw;
+    }
+
+
+    .final-word {
+        font-size:
+            75px;
     }
 
 
     .footer {
-        min-height: 70px;
+        width: 90vw;
 
-        font-size: 5px;
+        min-height:
+            70px;
 
         gap: 10px;
+
+        font-size: 5px;
     }
 
 }
