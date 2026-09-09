@@ -41,6 +41,7 @@ a {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 
@@ -241,13 +242,13 @@ img {
     align-items: center;
 
     /*
-       Slight upward optical adjustment.
-       This moves the whole logo area upward
-       without changing the rest of the layout.
+       Optical positioning only.
+       Keeps the logo centered while
+       moving the complete logo block
+       slightly upward.
     */
 
-    transform:
-        translateY(-28px);
+    padding-bottom: 35px;
 }
 
 
@@ -260,13 +261,15 @@ img {
     width:
         min(560px, 68vw);
 
+    margin: 0 auto;
+
     display: flex;
 
     justify-content: center;
 
     align-items: center;
 
-    margin: 0 auto;
+    text-align: center;
 }
 
 
@@ -276,7 +279,11 @@ img {
 
     width: 100%;
 
+    max-width: 560px;
+
     height: auto;
+
+    margin: 0 auto;
 
     object-fit: contain;
 
@@ -285,29 +292,12 @@ img {
 
     filter:
         contrast(1.08);
-
-    /*
-       Prevent accidental image movement.
-    */
-
-    transform:
-        translateY(0);
-
-    transition:
-        transform 0.4s ease;
-}
-
-
-.artwork img:hover {
-
-    transform:
-        scale(1.015);
 }
 
 
 /* =========================================================
    GENRE TEXT
-   NO AZZIZ LETTERING
+   NO AZZIZ TEXT UNDER LOGO
 ========================================================= */
 
 .artist-subtitle {
@@ -524,8 +514,6 @@ img {
     color: #fff;
 }
 
-
-/* Smaller original player */
 
 .soundcloud-player {
 
@@ -813,7 +801,8 @@ img {
 
     font-size: 7px;
 
-    letter-spacing: 0.2em;
+    letter-spacing:
+        0.2em;
 }
 
 
@@ -953,10 +942,17 @@ img {
 
     position: absolute;
 
+    left: 50%;
+
+    top: 50%;
+
     width:
         min(560px, 75vw);
 
     max-width: 560px;
+
+    transform:
+        translate(-50%, -50%);
 
     opacity:
         0.13;
@@ -1045,7 +1041,7 @@ img {
 
     bottom: 18px;
 
-    z-index: 9999;
+    z-index: 99999;
 
     min-width: 125px;
 
@@ -1063,7 +1059,7 @@ img {
     gap: 7px;
 
     background:
-        rgba(0, 0, 0, 0.92);
+        rgba(0, 0, 0, 0.94);
 
     border:
         1px solid rgba(255, 255, 255, 0.12);
@@ -1210,12 +1206,10 @@ img {
     }
 
 
-    /* Keep logo centered but slightly higher */
-
     .hero-center {
 
-        transform:
-            translateY(-20px);
+        padding-bottom:
+            25px;
     }
 
 
@@ -1229,6 +1223,14 @@ img {
 
         margin:
             0 auto;
+    }
+
+
+    .artwork img {
+
+        width: 100%;
+
+        margin: 0 auto;
     }
 
 
@@ -1367,6 +1369,9 @@ img {
 
         width:
             95vw;
+
+        max-width:
+            520px;
     }
 
 
@@ -1395,8 +1400,6 @@ img {
             35px;
     }
 
-
-    /* Mobile visitor counter */
 
     .visitor-counter {
 
