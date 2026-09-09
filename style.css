@@ -1,8 +1,7 @@
-/* ==========================================================
+/* =========================================================
    AZZIZ
-   DARKPSY / OCCULT / UNDERGROUND
-========================================================== */
-
+   DARKPSY WEBSITE
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -10,15 +9,13 @@
     padding: 0;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     background: #000;
-    color: #f2f2f2;
+    color: #ededed;
 
     font-family:
         "Barlow Condensed",
@@ -28,386 +25,69 @@ body {
     overflow-x: hidden;
 }
 
-
 a {
     color: inherit;
     text-decoration: none;
 }
 
-
 :root {
-
-    --black: #000;
-    --black-2: #070707;
-    --white: #f2f2f2;
-    --grey: #686868;
-    --dark-grey: #303030;
-
+    --black: #000000;
+    --dark: #070707;
+    --white: #ededed;
+    --grey: #707070;
+    --dark-grey: #363636;
     --red: #720000;
-
-    --line: rgba(255,255,255,0.13);
-
+    --line: rgba(255,255,255,0.12);
 }
 
 
-
-/* ==========================================================
+/* =========================================================
    PAGE
-========================================================== */
+========================================================= */
 
-.site {
-    position: relative;
-
+.page {
     min-height: 100vh;
-
-    background:
-        radial-gradient(
-            circle at 50% 15%,
-            rgba(90,0,0,0.08),
-            transparent 30%
-        ),
-        #000;
+    background: #000;
 }
 
 
+/* =========================================================
+   HEADER
+========================================================= */
 
-/* ==========================================================
-   TOP BAR
-========================================================== */
+.header {
+    height: 70px;
 
-.topbar {
+    width: 90vw;
+    max-width: 1250px;
 
-    position: relative;
-
-    z-index: 20;
-
-    height: 75px;
-
-    padding:
-        0 5vw;
+    margin: 0 auto;
 
     display: grid;
-
-    grid-template-columns:
-        1fr
-        auto
-        1fr;
+    grid-template-columns: 1fr auto 1fr;
 
     align-items: center;
 
-    border-bottom:
-        1px solid var(--line);
+    border-bottom: 1px solid var(--line);
 }
 
-
-.top-logo {
-
+.logo {
     font-size: 22px;
-
     font-weight: 900;
-
     letter-spacing: 0.12em;
 }
 
-
-.top-logo::after {
-
-    content: ".";
-
+.logo span {
     color: var(--red);
 }
 
+.header nav {
+    display: flex;
+    gap: 28px;
+}
 
-.top-center {
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 7px;
-
-    letter-spacing: 0.2em;
-
+.header nav a {
     color: #555;
-}
-
-
-.top-right {
-
-    justify-self: end;
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 7px;
-
-    letter-spacing: 0.2em;
-
-    color: #444;
-}
-
-
-
-/* ==========================================================
-   HERO
-========================================================== */
-
-.hero {
-
-    position: relative;
-
-    min-height: calc(100vh - 75px);
-
-    padding:
-        35px 5vw
-        45px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    overflow: hidden;
-}
-
-
-.hero-intro {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    color: #444;
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 7px;
-
-    letter-spacing: 0.2em;
-}
-
-
-
-/* ==========================================================
-   HERO ART
-========================================================== */
-
-.logo-stage {
-
-    position: absolute;
-
-    left: 50%;
-
-    top: 50%;
-
-    width: min(650px, 62vw);
-
-    aspect-ratio: 1 / 1;
-
-    transform:
-        translate(-50%, -50%);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-
-.logo-glow {
-
-    position: absolute;
-
-    inset: 15%;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(100,0,0,0.16),
-            transparent 65%
-        );
-
-    filter: blur(35px);
-}
-
-
-.azziz-art {
-
-    position: relative;
-
-    z-index: 2;
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: contain;
-
-    mix-blend-mode: screen;
-
-    filter:
-        contrast(1.08)
-        brightness(0.98);
-
-    transition:
-        transform 0.8s ease,
-        filter 0.8s ease;
-}
-
-
-.logo-stage:hover .azziz-art {
-
-    transform: scale(1.025);
-
-    filter:
-        contrast(1.15)
-        brightness(1.05);
-}
-
-
-
-/* ==========================================================
-   DECORATIVE SYMBOLS
-========================================================== */
-
-.hero-symbol {
-
-    position: absolute;
-
-    top: 50%;
-
-    color: #292929;
-
-    font-size: 80px;
-
-    font-weight: 300;
-
-    transform:
-        translateY(-50%);
-}
-
-
-.left-symbol {
-
-    left: 7vw;
-}
-
-
-.right-symbol {
-
-    right: 7vw;
-}
-
-
-
-/* ==========================================================
-   HERO NAME
-========================================================== */
-
-.hero-name {
-
-    position: relative;
-
-    z-index: 5;
-
-    align-self: center;
-
-    margin-top: auto;
-
-    margin-bottom: auto;
-
-    text-align: center;
-
-    pointer-events: none;
-}
-
-
-.blackletter {
-
-    font-family:
-        "UnifrakturCook",
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(
-            75px,
-            10vw,
-            150px
-        );
-
-    line-height: 0.8;
-
-    color: #f0f0f0;
-
-    text-shadow:
-        0 0 35px rgba(0,0,0,0.9);
-}
-
-
-.hero-tag {
-
-    margin-top: 20px;
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 7px;
-
-    letter-spacing: 0.25em;
-
-    color: #777;
-}
-
-
-.hero-tag::before {
-
-    content: "";
-
-    display: inline-block;
-
-    width: 35px;
-
-    height: 1px;
-
-    margin:
-        0 12px 3px 0;
-
-    background: var(--red);
-}
-
-
-
-/* ==========================================================
-   HERO BOTTOM
-========================================================== */
-
-.hero-bottom {
-
-    position: relative;
-
-    z-index: 5;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr
-        auto
-        auto;
-
-    align-items: center;
-
-    gap: 30px;
-
-    color: #444;
 
     font-family:
         "Space Mono",
@@ -416,121 +96,246 @@ a {
     font-size: 7px;
 
     letter-spacing: 0.16em;
+
+    transition: color 0.25s ease;
+}
+
+.header nav a:hover {
+    color: #fff;
+}
+
+.location {
+    justify-self: end;
+
+    color: #444;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 0.18em;
 }
 
 
-.hero-line {
+/* =========================================================
+   HERO
+========================================================= */
 
+.hero {
+    position: relative;
+
+    min-height: calc(100vh - 70px);
+
+    width: 90vw;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 30px 0 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+
+    color: #444;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 1;
+}
+
+.logo-frame {
+    width: min(540px, 70vw);
+
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.azziz-logo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    mix-blend-mode: screen;
+
+    filter: contrast(1.05);
+}
+
+.hero-name {
+    margin-top: -40px;
+
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+}
+
+.gothic-name {
+    font-family:
+        "UnifrakturCook",
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(70px, 9vw, 135px);
+
+    line-height: 0.8;
+
+    color: #f1f1f1;
+}
+
+.hero-sub {
+    margin-top: 18px;
+
+    color: #666;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 0.22em;
+}
+
+.hero-bottom {
+    display: grid;
+
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    color: #444;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 0.18em;
+}
+
+.hero-bottom .line {
     height: 1px;
 
     background: var(--line);
 }
 
-
-.hero-bottom .red {
-
-    color: #760000;
+.red {
+    color: var(--red);
 }
 
 
+/* =========================================================
+   SECTIONS
+========================================================= */
 
-/* ==========================================================
-   SECTION MARKER
-========================================================== */
+.section {
+    width: 90vw;
+    max-width: 1250px;
 
-.section-marker {
+    margin: 0 auto;
 
-    margin-bottom: 40px;
+    padding: 110px 0;
 
+    border-bottom: 1px solid var(--line);
+}
+
+.section-heading {
     display: flex;
 
     align-items: center;
 
     gap: 15px;
 
+    margin-bottom: 40px;
+}
+
+.section-heading span {
+    color: var(--red);
+
     font-family:
         "Space Mono",
         monospace;
 
-    font-size: 8px;
+    font-size: 7px;
+}
+
+.section-heading h2 {
+    font-size: 13px;
+
+    font-weight: 600;
 
     letter-spacing: 0.18em;
 }
 
 
-.section-marker span {
-
-    color: var(--red);
-}
-
-
-.section-marker strong {
-
-    font-weight: 400;
-
-    color: #666;
-}
-
-
-
-/* ==========================================================
+/* =========================================================
    MUSIC
-========================================================== */
+========================================================= */
 
-.music-section {
-
-    padding:
-        120px 5vw;
-
-    border-top:
-        1px solid var(--line);
-}
-
-
-.music-layout {
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
+.music-grid {
     display: grid;
 
     grid-template-columns:
         525px
-        1fr;
+        minmax(280px, 1fr);
 
-    gap: 35px;
+    gap: 25px;
+
+    max-width: 1100px;
 }
 
-
-
-/* ==========================================================
-   SOUNDCLOUD
-========================================================== */
-
-.soundcloud {
-
+.soundcloud-box {
     padding: 10px;
 
-    border:
-        1px solid var(--line);
-
     background: #050505;
+
+    border: 1px solid var(--line);
 }
 
-
-.module-top {
-
-    height: 40px;
-
-    padding:
-        0 5px;
+.box-header {
+    height: 35px;
 
     display: flex;
 
+    justify-content: space-between;
+
     align-items: center;
 
-    justify-content: space-between;
+    padding: 0 5px;
 
     color: #555;
 
@@ -543,46 +348,38 @@ a {
     letter-spacing: 0.15em;
 }
 
-
-.module-top a {
-
+.box-header a {
     color: #444;
 
-    transition:
-        color 0.25s ease;
+    transition: color 0.25s ease;
 }
 
-
-.module-top a:hover {
-
+.box-header a:hover {
     color: #fff;
 }
 
 
-.soundcloud iframe {
+/* SMALLER ORIGINAL SOUNDCLOUD WIDGET */
 
+.soundcloud-player {
     display: block;
 
     width: 100%;
 
-    height: 350px;
+    height: 300px;
 
     border: 0;
 }
 
 
+/* =========================================================
+   BANDCAMP
+========================================================= */
 
-/* ==========================================================
-   RELEASE
-========================================================== */
+.bandcamp-box {
+    min-height: 350px;
 
-.release {
-
-    position: relative;
-
-    min-height: 400px;
-
-    padding: 28px;
+    padding: 25px;
 
     display: flex;
 
@@ -590,89 +387,35 @@ a {
 
     justify-content: space-between;
 
-    overflow: hidden;
-
-    border:
-        1px solid var(--line);
-
     background:
         linear-gradient(
             135deg,
-            rgba(100,0,0,0.12),
-            transparent 45%
+            rgba(114,0,0,0.12),
+            transparent 55%
         ),
         #050505;
 
+    border: 1px solid var(--line);
+
     transition:
-        border-color 0.35s ease,
-        transform 0.35s ease;
+        border-color 0.3s ease,
+        transform 0.3s ease;
 }
 
+.bandcamp-box:hover {
+    border-color: rgba(114,0,0,0.7);
 
-.release:hover {
-
-    border-color:
-        rgba(120,0,0,0.75);
-
-    transform:
-        translateY(-5px);
+    transform: translateY(-3px);
 }
-
-
-.release-symbol {
-
-    position: absolute;
-
-    right: 25px;
-
-    top: 15px;
-
-    color: #222;
-
-    font-size: 85px;
-
-    line-height: 1;
-}
-
-
-.release-top {
-
-    position: relative;
-
-    z-index: 2;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    color: #555;
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 7px;
-
-    letter-spacing: 0.15em;
-}
-
 
 .release-content {
-
-    position: relative;
-
-    z-index: 2;
-
-    margin:
-        auto 0;
+    margin: auto 0;
 }
 
-
-.release-content small {
-
+.release-label {
     display: block;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
     color: #555;
 
@@ -685,15 +428,8 @@ a {
     letter-spacing: 0.2em;
 }
 
-
-.release-content h2 {
-
-    font-size:
-        clamp(
-            50px,
-            6vw,
-            90px
-        );
+.release-content h3 {
+    font-size: clamp(45px, 6vw, 80px);
 
     line-height: 0.78;
 
@@ -702,351 +438,12 @@ a {
     letter-spacing: -0.04em;
 }
 
+.release-info {
+    display: block;
 
-.release-speed {
-
-    margin-top: 25px;
-
-    color: var(--red);
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 10px;
-
-    letter-spacing: 0.2em;
-}
-
-
-.release-bottom {
-
-    position: relative;
-
-    z-index: 2;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    color: #555;
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 7px;
-
-    letter-spacing: 0.16em;
-}
-
-
-.release-bottom span:last-child {
+    margin-top: 20px;
 
     color: var(--red);
-
-    font-size: 16px;
-}
-
-
-
-/* ==========================================================
-   LABELS
-========================================================== */
-
-.labels-section {
-
-    padding:
-        120px 5vw;
-
-    border-top:
-        1px solid var(--line);
-}
-
-
-.labels {
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    border-top:
-        1px solid var(--line);
-}
-
-
-.label {
-
-    min-height: 125px;
-
-    padding:
-        0 25px;
-
-    display: grid;
-
-    grid-template-columns:
-        60px
-        1fr
-        100px
-        35px;
-
-    align-items: center;
-
-    border-bottom:
-        1px solid var(--line);
-
-    transition:
-        background 0.3s ease,
-        padding 0.3s ease;
-}
-
-
-.label:hover {
-
-    padding-left: 40px;
-
-    background:
-        rgba(100,0,0,0.055);
-}
-
-
-.label-id {
-
-    color: #3c3c3c;
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 7px;
-}
-
-
-.label-main {
-
-    font-size:
-        clamp(
-            30px,
-            4.5vw,
-            65px
-        );
-
-    font-weight: 800;
-
-    letter-spacing: -0.02em;
-}
-
-
-.label-sub {
-
-    color: #444;
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 7px;
-
-    letter-spacing: 0.15em;
-}
-
-
-.label-arrow {
-
-    color: var(--red);
-
-    font-size: 18px;
-}
-
-
-
-/* ==========================================================
-   ABOUT
-========================================================== */
-
-.about-section {
-
-    padding:
-        120px 5vw;
-
-    border-top:
-        1px solid var(--line);
-}
-
-
-.about-grid {
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr
-        430px;
-
-    gap: 100px;
-
-    align-items: center;
-}
-
-
-.about-heading .large {
-
-    margin-bottom: 40px;
-
-    font-size:
-        clamp(
-            75px,
-            10vw,
-            145px
-        );
-}
-
-
-.about-motto {
-
-    font-size:
-        clamp(
-            45px,
-            6vw,
-            85px
-        );
-
-    line-height: 0.82;
-
-    font-weight: 900;
-
-    letter-spacing: -0.04em;
-}
-
-
-.about-motto span {
-
-    color: var(--red);
-}
-
-
-.about-text {
-
-    color: #6b6b6b;
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 10px;
-
-    line-height: 2;
-}
-
-
-.about-location {
-
-    margin-bottom: 35px;
-
-    color: var(--red);
-
-    font-size: 7px;
-
-    letter-spacing: 0.2em;
-}
-
-
-.about-text p + p {
-
-    margin-top: 25px;
-}
-
-
-
-/* ==========================================================
-   SOCIAL
-========================================================== */
-
-.social-section {
-
-    padding:
-        120px 5vw;
-
-    border-top:
-        1px solid var(--line);
-}
-
-
-.social-grid {
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr
-        1fr;
-
-    border-top:
-        1px solid var(--line);
-
-    border-left:
-        1px solid var(--line);
-}
-
-
-.social-grid a {
-
-    min-height: 100px;
-
-    padding:
-        0 25px;
-
-    display: grid;
-
-    grid-template-columns:
-        55px
-        1fr
-        30px;
-
-    align-items: center;
-
-    border-right:
-        1px solid var(--line);
-
-    border-bottom:
-        1px solid var(--line);
-
-    transition:
-        background 0.3s ease,
-        padding 0.3s ease;
-}
-
-
-.social-grid a:hover {
-
-    padding-left: 35px;
-
-    background:
-        rgba(100,0,0,0.07);
-}
-
-
-.social-index {
-
-    color: #3a3a3a;
-
-    font-family:
-        "Space Mono",
-        monospace;
-
-    font-size: 7px;
-}
-
-
-.social-name {
-
-    color: #888;
 
     font-family:
         "Space Mono",
@@ -1057,93 +454,10 @@ a {
     letter-spacing: 0.2em;
 }
 
-
-.social-arrow {
-
-    color: var(--red);
-
-    font-size: 17px;
-}
-
-
-
-/* ==========================================================
-   FINAL ART
-========================================================== */
-
-.final-section {
-
-    position: relative;
-
-    min-height: 650px;
-
-    padding:
-        100px 5vw;
-
+.release-footer {
     display: flex;
 
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-    border-top:
-        1px solid var(--line);
-}
-
-
-.final-art {
-
-    position: absolute;
-
-    width: min(700px, 80vw);
-
-    opacity: 0.09;
-}
-
-
-.final-art img {
-
-    width: 100%;
-
-    display: block;
-
-    mix-blend-mode: screen;
-
-    filter:
-        grayscale(100%);
-}
-
-
-.final-title {
-
-    position: relative;
-
-    z-index: 2;
-
-    text-align: center;
-}
-
-
-.final-title .blackletter {
-
-    font-size:
-        clamp(
-            90px,
-            13vw,
-            190px
-        );
-}
-
-
-.final-title span {
-
-    display: block;
-
-    margin-top: 25px;
+    justify-content: space-between;
 
     color: #555;
 
@@ -1153,32 +467,266 @@ a {
 
     font-size: 7px;
 
-    letter-spacing: 0.25em;
+    letter-spacing: 0.15em;
 }
 
 
+/* =========================================================
+   LABELS
+========================================================= */
 
-/* ==========================================================
-   FOOTER
-========================================================== */
+.labels {
+    max-width: 1100px;
 
-.footer {
+    border-top: 1px solid var(--line);
+}
 
-    min-height: 70px;
+.label {
+    min-height: 100px;
 
-    padding:
-        0 5vw;
+    display: grid;
 
-    display: flex;
-
-    justify-content: space-between;
+    grid-template-columns:
+        55px
+        1fr
+        35px;
 
     align-items: center;
 
-    border-top:
-        1px solid var(--line);
+    border-bottom: 1px solid var(--line);
 
-    color: #3c3c3c;
+    transition:
+        background 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.label:hover {
+    padding-left: 15px;
+
+    background:
+        rgba(114,0,0,0.06);
+}
+
+.label .number {
+    color: #3d3d3d;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 7px;
+}
+
+.label strong {
+    font-size: clamp(25px, 4vw, 52px);
+
+    font-weight: 800;
+
+    letter-spacing: -0.01em;
+}
+
+.label .arrow {
+    color: var(--red);
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid {
+    max-width: 1100px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        430px;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-title .gothic-name {
+    font-size: clamp(80px, 10vw, 145px);
+
+    margin-bottom: 35px;
+}
+
+.large-title {
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: 0.78;
+
+    font-weight: 900;
+
+    letter-spacing: -0.04em;
+}
+
+.large-title span {
+    color: var(--red);
+}
+
+.about-text {
+    color: #707070;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 10px;
+
+    line-height: 2;
+}
+
+.about-meta {
+    margin-bottom: 30px;
+
+    color: var(--red);
+
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+}
+
+.about-text p + p {
+    margin-top: 22px;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.social-grid {
+    max-width: 1100px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid var(--line);
+
+    border-left: 1px solid var(--line);
+}
+
+.social-grid a {
+    min-height: 85px;
+
+    padding: 0 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        45px
+        1fr
+        25px;
+
+    align-items: center;
+
+    border-right: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+
+    transition:
+        background 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.social-grid a:hover {
+    padding-left: 30px;
+
+    background:
+        rgba(114,0,0,0.06);
+}
+
+.social-grid a span {
+    color: #3d3d3d;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 7px;
+}
+
+.social-grid strong {
+    color: #888;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+}
+
+.social-grid b {
+    color: var(--red);
+
+    font-size: 15px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final {
+    position: relative;
+
+    min-height: 550px;
+
+    width: 90vw;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.final-logo {
+    position: absolute;
+
+    width: min(600px, 70vw);
+
+    opacity: 0.12;
+
+    mix-blend-mode: screen;
+}
+
+.final-name {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+}
+
+.final-name .gothic-name {
+    font-size: clamp(90px, 12vw, 170px);
+}
+
+.final-name span {
+    display: block;
+
+    margin-top: 20px;
+
+    color: #555;
 
     font-family:
         "Space Mono",
@@ -1186,200 +734,157 @@ a {
 
     font-size: 7px;
 
-    letter-spacing: 0.16em;
+    letter-spacing: 0.22em;
 }
 
 
+/* =========================================================
+   FOOTER
+========================================================= */
 
-/* ==========================================================
+.footer {
+    width: 90vw;
+    max-width: 1250px;
+
+    min-height: 65px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #3b3b3b;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
    TABLET
-========================================================== */
+========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
-    .logo-stage {
-
-        width: 70vw;
+    .music-grid {
+        grid-template-columns: 1fr;
     }
-
-
-    .music-layout {
-
-        grid-template-columns:
-            1fr;
-
-        max-width: 650px;
-    }
-
 
     .about-grid {
+        grid-template-columns: 1fr;
 
-        grid-template-columns:
-            1fr;
-
-        gap: 60px;
+        gap: 50px;
     }
 
-
-    .about-text {
-
-        max-width: 600px;
+    .soundcloud-box {
+        max-width: 525px;
     }
 
 }
 
 
-
-/* ==========================================================
+/* =========================================================
    MOBILE
-========================================================== */
+========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
 
-    .topbar {
+    .header {
+        height: 60px;
 
-        height: 62px;
+        width: 90vw;
 
-        padding:
-            0 6vw;
-
-        grid-template-columns:
-            1fr auto;
+        grid-template-columns: 1fr auto;
     }
 
-
-    .top-center {
-
+    .header nav {
         display: none;
     }
 
-
-    .top-logo {
-
+    .logo {
         font-size: 18px;
+    }
+
+    .location {
+        font-size: 6px;
     }
 
 
     .hero {
+        min-height: calc(100vh - 60px);
 
-        min-height:
-            calc(100vh - 62px);
-
-        padding:
-            25px 6vw
-            30px;
+        padding-top: 25px;
     }
 
-
-    .hero-intro {
-
+    .hero-top {
         font-size: 6px;
     }
 
-
-    .logo-stage {
-
-        width: 95vw;
-
-        max-width: 550px;
+    .logo-frame {
+        width: 94vw;
     }
-
-
-    .hero-symbol {
-
-        display: none;
-    }
-
 
     .hero-name {
-
-        margin-top: 55vh;
+        margin-top: -25px;
     }
 
-
-    .blackletter {
-
+    .gothic-name {
         font-size: 75px;
     }
 
-
-    .hero-tag {
-
+    .hero-sub {
         font-size: 6px;
 
-        line-height: 1.7;
+        letter-spacing: 0.15em;
     }
-
 
     .hero-bottom {
-
         grid-template-columns:
-            1fr
-            1fr;
+            auto 1fr auto;
 
-        gap: 8px;
+        gap: 10px;
 
-        font-size: 6px;
+        font-size: 5px;
     }
 
 
-    .hero-line {
-
-        grid-column:
-            1 / -1;
-
-        margin-bottom: 8px;
+    .section {
+        padding: 75px 0;
     }
 
-
-    .hero-bottom span:last-child {
-
-        text-align: right;
-    }
-
-
-    .music-section,
-    .labels-section,
-    .about-section,
-    .social-section {
-
-        padding:
-            80px 6vw;
-    }
-
-
-    .section-marker {
-
+    .section-heading {
         margin-bottom: 30px;
-
-        font-size: 7px;
     }
 
 
-    .soundcloud iframe {
+    /* SMALL MOBILE SOUNDCLOUD */
 
-        height: 350px;
+    .soundcloud-player {
+        height: 300px;
     }
 
 
-    .release {
+    .bandcamp-box {
+        min-height: 300px;
 
-        min-height: 330px;
+        padding: 20px;
     }
 
-
-    .release-content h2 {
-
-        font-size: 55px;
+    .release-content h3 {
+        font-size: 52px;
     }
 
 
     .label {
-
-        min-height: 95px;
-
-        padding:
-            0 12px;
+        min-height: 85px;
 
         grid-template-columns:
             35px
@@ -1387,86 +892,48 @@ a {
             25px;
     }
 
-
-    .label:hover {
-
-        padding-left: 18px;
+    .label strong {
+        font-size: 23px;
     }
 
 
-    .label-main {
-
-        font-size: 25px;
+    .about-title .gothic-name {
+        font-size: 85px;
     }
 
-
-    .label-sub {
-
-        display: none;
-    }
-
-
-    .about-grid {
-
-        gap: 55px;
-    }
-
-
-    .about-heading .large {
-
-        margin-bottom: 30px;
-
-        font-size: 90px;
-    }
-
-
-    .about-motto {
-
+    .large-title {
         font-size: 20vw;
     }
 
 
-    .about-text {
-
-        font-size: 9px;
-    }
-
-
     .social-grid {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
-
 
     .social-grid a {
-
-        min-height: 75px;
+        min-height: 70px;
     }
 
 
-    .final-section {
-
-        min-height: 500px;
+    .final {
+        min-height: 450px;
     }
 
+    .final-logo {
+        width: 95vw;
+    }
 
-    .final-title .blackletter {
-
-        font-size: 85px;
+    .final-name .gothic-name {
+        font-size: 90px;
     }
 
 
     .footer {
-
-        min-height: 65px;
-
-        padding:
-            15px 6vw;
-
-        gap: 10px;
+        min-height: 70px;
 
         font-size: 5px;
+
+        gap: 10px;
     }
 
 }
